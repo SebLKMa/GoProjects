@@ -1,0 +1,48 @@
+https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-14-04#how-to-set-up-git
+
+You can use the apt package management tools to update your local package index. Afterwards, you can download and install the program:
+sudo apt-get update
+sudo apt-get install git
+
+Set Up Git:
+git config --global user.name "Your Name"
+git config --global user.email "youremail@domain.com"
+
+We can see all of the configuration items that have been set by typing:
+git config --list
+
+tno@BlockchainBeast:~/Downloads$ git config --global user.name "SebLKMa"
+tno@BlockchainBeast:~/Downloads$ git config --global user.email "sebmalikkeung@gmail.com"
+tno@BlockchainBeast:~/Downloads$ git config --list
+user.email=sebmalikkeung@gmail.com
+user.name=SebLKMa
+
+tno@BlockchainBeast:~/Downloads$ which git
+/usr/bin/git
+
+GET LATEST TO EMPTY DIR
+Go to local dir e.g. GoProjects
+
+tno@BlockchainBeast:~/dev/GoProjects$ git init
+Initialized empty Git repository in /home/tno/dev/GoProjects/.git/
+
+tno@BlockchainBeast:~/dev/GoProjects$ git remote add origin https://github.com/SebLKMa/GoProjects.git
+
+tno@BlockchainBeast:~/dev/GoProjects$ git fetch --all
+Fetching origin
+remote: Counting objects: 35, done.
+remote: Compressing objects: 100% (29/29), done.
+remote: Total 35 (delta 3), reused 35 (delta 3), pack-reused 0
+Unpacking objects: 100% (35/35), done.
+From https://github.com/SebLKMa/GoProjects
+ * [new branch]      master     -> origin/master
+
+tno@BlockchainBeast:~/dev/GoProjects$ git pull origin master
+From https://github.com/SebLKMa/GoProjects
+ * branch            master     -> FETCH_HEAD
+
+tno@BlockchainBeast:~/dev/GoProjects$ ls -l
+total 4
+drwxrwxr-x 3 tno tno 4096 Dec 12 16:09 hellobasic
+
+

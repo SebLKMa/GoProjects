@@ -1,0 +1,64 @@
+INSTALL
+=======
+1. Login to your Ubuntu system using ssh and upgrade to apply latest security updates there.
+$ sudo apt-get update
+$ sudo apt-get -y upgrade
+
+2. Download the Go language binary archive file using following link.
+https://golang.org/dl/
+$ wget https://storage.googleapis.com/golang/go1.9.2.linux-amd64.tar.gz
+
+3. Extract the downloaded archive and install it to the desired location on the system. For this tutorial, I am installing it under /usr/local directory. You can also put this under the home directory (for shared hosting) or other location.
+$ sudo tar -xvf go1.9.2.linux-amd64.tar.gz
+$ sudo mv go /usr/local
+
+SETUP
+=====
+You need to set 3 environment variables as GOROOT, GOPATH and PATH
+
+GOROOT is the location where Go package is installed on your system.
+$ export GOROOT=/usr/local/go
+
+GOPATH is the location of your work directory. For example my project directory is ~/dev/GoProjects .
+$ export GOPATH=$HOME/dev/GoProjects
+
+Now set the PATH variable to access go binary system wide.
+$ export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+
+To make it permanent add above commands in ~/.profile file:
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/dev/GoProjects
+# set PATH so it includes user's private bin directories
+PATH="$HOME/bin:$HOME/.local/bin:$PATH"
+export PATH=$PATH:/home/tno/dev/ethereum/geth/bin
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+
+VERIFY
+======
+seb@BlockchainBeast:~$ go version
+go version go1.9.2 linux/amd64
+
+seb@BlockchainBeast:~$ go env
+GOARCH="amd64"
+GOBIN=""
+GOEXE=""
+GOHOSTARCH="amd64"
+GOHOSTOS="linux"
+GOOS="linux"
+GOPATH="/home/seb/dev/GoProjects"
+GORACE=""
+GOROOT="/usr/local/go"
+GOTOOLDIR="/usr/local/go/pkg/tool/linux_amd64"
+GCCGO="gccgo"
+CC="gcc"
+GOGCCFLAGS="-fPIC -m64 -pthread -fmessage-length=0 -fdebug-prefix-map=/tmp/go-build091340936=/tmp/go-build -gno-record-gcc-switches"
+CXX="g++"
+CGO_ENABLED="1"
+CGO_CFLAGS="-g -O2"
+CGO_CPPFLAGS=""
+CGO_CXXFLAGS="-g -O2"
+CGO_FFLAGS="-g -O2"
+CGO_LDFLAGS="-g -O2"
+PKG_CONFIG="pkg-config"
+
+
