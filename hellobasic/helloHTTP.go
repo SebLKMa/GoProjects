@@ -37,4 +37,5 @@ func main() {
     
     fmt.Println("Starting HTTP server...")
     http.ListenAndServe(":9009", nil)
+    // go to web browser, open HTTP://localhost:9009/hello
 }
