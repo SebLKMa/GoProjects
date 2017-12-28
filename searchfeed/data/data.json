@@ -24,4 +24,9 @@
         , "link" : "https://cryptocurrencynews.com/feed/"
         , "type" : "rss"        
     }
+    , {
+        "site" : "tokenmarket"
+        , "link" : "https://tokenmarket.net/blog/rss"
+        , "type" : "rss"        
+    }
 ]
