@@ -19,4 +19,9 @@
         , "link" : "http://feeds.nbcnews.com/feeds/topstories"
         , "type" : "rss"        
     }
+    , {
+        "site" : "cryptocurrencynews"
+        , "link" : "https://cryptocurrencynews.com/feed/"
+        , "type" : "rss"        
+    }
 ]

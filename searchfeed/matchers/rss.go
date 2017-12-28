@@ -115,6 +115,8 @@ func (m rssMatcher) Search(feed *search.Feed, searchTerm string) ([]*search.Resu
 		}
 
 		// check if description matches the provided search term
+		// NOTE that we are using "=" instead of ":=" as both variables have been initialized and 
+		//      assigned before, see above
 		matched, err = regexp.MatchString(searchTerm, channelItem.Description)
 		if err != nil {
 			return nil, err
@@ -123,7 +125,7 @@ func (m rssMatcher) Search(feed *search.Feed, searchTerm string) ([]*search.Resu
 		if matched {
 			results = append(results, &search.Result {
 				Field: "Description",
-				Content: channelItem.GeoRssPoint,
+				Content: channelItem.Description,
 			})
 		}
 	}
