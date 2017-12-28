@@ -18,8 +18,7 @@ func init() {
 func main() {
 	// command line flag -term="some words"
 	searchTerm := flag.String("term", "president", "the search term")
-
-    // parse
+    // parse to get the term
     flag.Parse()
     
     // after Parse, any non-flag args can also be retrieved with flag.Args() returning []string
