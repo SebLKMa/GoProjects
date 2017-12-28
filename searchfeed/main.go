@@ -3,7 +3,8 @@ package main
 import (
 	"log"
 	"os"
-	_ "matchers" "search"
+	_ "../searchfeed/matchers" 
+	"../searchfeed/search"
 )
 
 // thia is called before main
@@ -14,5 +15,5 @@ func init() {
 
 func main() {
 	// perform search for this search term
-	search.Run("president")
+	search.Run("Dreaming")
 }

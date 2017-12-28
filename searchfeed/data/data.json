@@ -1,6 +1,6 @@
-{
+[
     {
-        "site" : "npt"
+        "site" : "npr"
         , "link" : "http://www.npr.org/rss/rss.php?id=1001"
         , "type" : "rss"
     }
@@ -19,4 +19,4 @@
         , "link" : "http://feeds.nbcnews.com/feeds/topstories"
         , "type" : "rss"        
     }
-}
+]
