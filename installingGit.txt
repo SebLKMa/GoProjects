@@ -58,11 +58,12 @@ fatal: unable to access 'https://github.com/sebtno/FIR.git/': The requested URL 
 The following was the solution that finally worked satisfactory for me: 
 http://stackoverflow.com/questions/15381198/remove-credentials-from-git
 
-If this cannot work
+Try this:
+remove the [user] and [credential] entries from C:\Users\<username>\.gitconfig and
 
 git config --system --unset credential.helper
 
-Try this
+or Try this:
 
 git config --global credential.helper wincred
 
