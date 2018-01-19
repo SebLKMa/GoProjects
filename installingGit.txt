@@ -45,4 +45,24 @@ tno@BlockchainBeast:~/dev/GoProjects$ ls -l
 total 4
 drwxrwxr-x 3 tno tno 4096 Dec 12 16:09 hellobasic
 
+WRONG USER and PASSWORD when using git push
+===========================================
+SEE 
+https://stackoverflow.com/questions/15381198/remove-credentials-from-git
+https://nirklars.wordpress.com/tag/git-push-wrong-username/
+
+C:\TNO\tnodevt\FIR>git push -u origin master
+remote: Permission to sebtno/FIR.git denied to SebLKMa.
+fatal: unable to access 'https://github.com/sebtno/FIR.git/': The requested URL returned error: 403
+
+The following was the solution that finally worked satisfactory for me: http://stackoverflow.com/questions/15381198/remove-credentials-from-git
+
+This command changes so that git uses windows own credential manager:
+
+1
+git config --global credential.helper wincred
+After this setting is changed try pushing once again, if it fails then remove the entries related to github in the windows Credential Manger in the Control Panel. See the screenshot image below.
+
+The next time you push it should now prompt you for login credentials AND REMEMBER THEM! phew
+
 
